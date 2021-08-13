@@ -46,11 +46,12 @@ namespace StormWatch
                           | DiscordIntents.GuildPresences
             });
 
-            discord.Ready += (sender, _) =>
+            discord.Ready += async (sender, _) =>
             {
                 sender.Logger.LogInformation(
                     $"Connected to Discord as {discord.CurrentUser.Username}#{discord.CurrentUser.Discriminator}");
-                return Task.CompletedTask;
+                var username = (await sender.GetUserAsync(_config.User)).Username;
+                await discord.UpdateStatusAsync(new DiscordActivity($"{username}!", ActivityType.Watching));
             };
 
             discord.PresenceUpdated += PostOnlineStatusChange;
