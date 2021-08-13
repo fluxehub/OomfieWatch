@@ -1,3 +1,4 @@
 ﻿using System;
+using StormWatch;
 
-Console.WriteLine("Jeff");
+var config = Config.FromYaml("./config.yml");

@@ -1,0 +1,6 @@
+token: <TOKEN>
+channel: <CHANNEL_TO_POST>
+user: <USER_TO_STALK>
+gifs:
+  online: <ONLINE_GIF_URL>
+  offline: <OFFLINE_GIF_URL>
