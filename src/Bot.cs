@@ -6,7 +6,7 @@ using Microsoft.Extensions.Logging;
 
 namespace StormWatch
 {
-    public class Program
+    public class Bot
     {
         private static Config _config;
 
