@@ -41,9 +41,7 @@ namespace StormWatch
             {
                 Token = _config.Token,
                 TokenType = TokenType.Bot,
-                Intents = DiscordIntents.Guilds 
-                          | DiscordIntents.GuildMembers
-                          | DiscordIntents.GuildPresences
+                Intents = DiscordIntents.All
             });
 
             discord.Ready += async (sender, _) =>
